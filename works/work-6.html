@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dressme</title>
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- page-only: smaller screenshots + nicer tab grouping -->
+  <style>
+    .workImgDesktop{
+      width:100%;
+      max-width: 980px;
+      display:block;
+      margin: 0 auto;
+      border-radius: 14px;
+    }
+    .workImgPhone{
+      width:100%;
+      max-width: 360px;
+      display:block;
+      margin: 0 auto;
+      border-radius: 18px;
+    }
+
+    /* Tabs (Option 1: grouped Desktop / Mobile) */
+    .tabs{
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      align-items:center;
+    }
+    .tabGroup{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+    }
+    .tabLabel{
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      opacity:.6;
+      margin-right:8px;
+      white-space:nowrap;
+    }
+    .tabDivider{
+      width:1px;
+      height:28px;
+      background:var(--line);
+      opacity:.45;
+    }
+
+    /* mobile: divider becomes horizontal */
+    @media (max-width: 720px){
+      .tabs{ gap:12px; }
+      .tabDivider{
+        width:100%;
+        height:1px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="navWrap">
+    <nav class="nav">
+      <a class="brand" href="../index.html#top">Fatemeh</a>
+
+      <div class="navLinks">
+        <a class="navLink" href="../index.html#about">About me</a>
+        <a class="navLink" href="../index.html#value">Value</a>
+        <a class="navLink" href="../index.html#works">My works</a>
+        <a class="navLink" href="../index.html#contact">Contact</a>
+      </div>
+
+      <a class="navCta" href="../index.html#contact">Let’s talk</a>
+    </nav>
+  </header>
+
+  <main class="workPage">
+    <div class="workContainer">
+      <div class="backRow">
+        <a class="btn ghost" href="../index.html#works">← Back to works</a>
+      </div>
+
+      <section class="workHero">
+        <div class="workBody">
+          <h1>Dressme</h1>
+
+          <p class="workIntro">
+            E-commerce UI screens for a fashion shop concept.
+            Includes desktop and mobile versions (homepage, category, PDP) plus menu and filter screens.
+          </p>
+
+          <!-- Tabs (grouped) -->
+          <div class="tabs" role="tablist" aria-label="Dressme tabs">
+
+            <div class="tabGroup" role="presentation">
+              <span class="tabLabel">Desktop</span>
+
+              <button class="tab is-active" type="button" aria-selected="true"  data-target="tab-home-desktop">Homepage</button>
+              <button class="tab"           type="button" aria-selected="false" data-target="tab-cat-desktop">Category</button>
+              <button class="tab"           type="button" aria-selected="false" data-target="tab-pdp-desktop">PDP</button>
+            </div>
+
+            <div class="tabDivider" role="presentation" aria-hidden="true"></div>
+
+            <div class="tabGroup" role="presentation">
+              <span class="tabLabel">Mobile</span>
+
+              <button class="tab" type="button" aria-selected="false" data-target="tab-home-mobile">Homepage</button>
+              <button class="tab" type="button" aria-selected="false" data-target="tab-cat-mobile">Category</button>
+              <button class="tab" type="button" aria-selected="false" data-target="tab-pdp-mobile">PDP</button>
+              <button class="tab" type="button" aria-selected="false" data-target="tab-menu-mobile">Menu</button>
+              <button class="tab" type="button" aria-selected="false" data-target="tab-filter-mobile">Filter</button>
+            </div>
+
+          </div>
+
+          <!-- Divider -->
+          <div class="sectionDivider"></div>
+
+          <!-- Panels -->
+          <div class="tabPanels">
+
+            <section id="tab-home-desktop" class="tabPanel is-active" role="tabpanel">
+              <img class="workImgDesktop"
+                   src="../assets/works/work-6/dressme_home_desktop_1.png"
+                   alt="Dressme Desktop Homepage"
+                   loading="lazy">
+            </section>
+
+            <section id="tab-cat-desktop" class="tabPanel" role="tabpanel">
+              <img class="workImgDesktop"
+                   src="../assets/works/work-6/dressme_category_desktop_1.png"
+                   alt="Dressme Desktop Category"
+                   loading="lazy">
+            </section>
+
+            <section id="tab-pdp-desktop" class="tabPanel" role="tabpanel">
+              <img class="workImgDesktop"
+                   src="../assets/works/work-6/dressme_pdp_desktop_1.png"
+                   alt="Dressme Desktop PDP"
+                   loading="lazy">
+            </section>
+
+            <section id="tab-home-mobile" class="tabPanel" role="tabpanel">
+              <img class="workImgPhone"
+                   src="../assets/works/work-6/dressme_home_mobile_1.png"
+                   alt="Dressme Mobile Homepage"
+                   loading="lazy">
+            </section>
+
+            <section id="tab-cat-mobile" class="tabPanel" role="tabpanel">
+              <img class="workImgPhone"
+                   src="../assets/works/work-6/dressme_category_mobile_1.png"
+                   alt="Dressme Mobile Category"
+                   loading="lazy">
+            </section>
+
+            <section id="tab-pdp-mobile" class="tabPanel" role="tabpanel">
+              <img class="workImgPhone"
+                   src="../assets/works/work-6/dressme_pdp_mobile_1.png"
+                   alt="Dressme Mobile PDP"
+                   loading="lazy">
+            </section>
+
+            <section id="tab-menu-mobile" class="tabPanel" role="tabpanel">
+              <img class="workImgPhone"
+                   src="../assets/works/work-6/dressme_menu_mobile_1.png"
+                   alt="Dressme Mobile Menu"
+                   loading="lazy">
+            </section>
+
+            <section id="tab-filter-mobile" class="tabPanel" role="tabpanel">
+              <img class="workImgPhone"
+                   src="../assets/works/work-6/dressme_filter_mobile_1.png"
+                   alt="Dressme Mobile Filter"
+                   loading="lazy">
+            </section>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const tabs = Array.from(document.querySelectorAll(".tab"));
+    const panels = Array.from(document.querySelectorAll(".tabPanel"));
+
+    function activate(targetId){
+      tabs.forEach(t => {
+        const on = t.dataset.target === targetId;
+        t.classList.toggle("is-active", on);
+        t.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      panels.forEach(p => p.classList.toggle("is-active", p.id === targetId));
+    }
+
+    tabs.forEach(btn => btn.addEventListener("click", () => activate(btn.dataset.target)));
+  </script>
+</body>
+</html>

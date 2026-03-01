@@ -1,45 +1,248 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: white;
-            text-align: center;
-            padding: 50px;
-        }
-
-        h1 {
-            font-size: 40px;
-        }
-
-        p {
-            font-size: 18px;
-            color: #ccc;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: white;
-            color: black;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio</title>
+  <meta name="description" content="Fatemeh Farajollahi — Portfolio" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
+  <!-- Sticky Nav -->
+  <header class="navWrap">
+    <nav class="nav">
+      <a class="brand" href="#top">Fatemeh</a>
 
-    <h1>Fatemeh Farajollahi</h1>
-    <h1>gar nicht</h1>
-    <p>UI/UX Designer | User-Centered Interfaces | Scalable Design Systems | Research & Design-to-Code </p>
+      <div class="navLinks">
+        <a class="navLink" href="#about">About me</a>
+        <a class="navLink" href="#value">Value</a>
+        <a class="navLink" href="#works">My works</a>
+        <a class="navLink" href="#contact">Contact</a>
+      </div>
 
-    <a href="https://github.com/FatemehFarajollahi1996" class="btn">MY GitHub</a>
+      <a class="navCta" href="#contact">Let’s talk</a>
+    </nav>
+  </header>
 
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="gridOverlay" aria-hidden="true"></div>
+
+      <div class="heroContainer">
+        <div class="heroContent">
+          <div class="heroTop">
+            <div class="heroHello">Hi, I’m Fatemeh Farajollahi</div>
+          </div>
+
+          <h1 class="heroTitle">
+            UX/UI Designer<br />
+            creating intuitive<br />
+            and high-performing digital experiences
+          </h1>
+
+          <p class="heroSub">
+            I design user-centered interfaces for web applications and digital platforms —
+            combining clarity, structure, and strong visual design to create meaningful user experiences.
+          </p>
+
+          <div class="heroActions">
+            <a class="btn" href="#works">See my work</a>
+          </div>
+        </div>
+
+        <div class="heroImage">
+          <div class="heroStatus heroStatusRight">
+            <span class="dot" aria-hidden="true"></span>
+            available for new projects
+          </div>
+
+          <img src="./assets/profile.png" alt="Fatemeh Farajollahi" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="sectionHeader">
+        <h2>About me</h2>
+        <p>
+          I am a UX/UI Designer with experience in designing modern, responsive web applications
+          and digital products. Through my roles at Covento GmbH, klink IT GmbH and ista,
+          I have developed strong skills in user-centered design, structured user flows,
+          and scalable design systems. I enjoy transforming complex requirements into clear,
+          intuitive and visually consistent interfaces.
+        </p>
+      </div>
+
+      <div class="cards3">
+        <div class="infoCard">
+          <h3>Focus</h3>
+          <ul>
+            <li>Product design (UX/UI)</li>
+            <li>Interaction & prototyping</li>
+            <li>Design systems</li>
+          </ul>
+        </div>
+
+        <div class="infoCard">
+          <h3>Strengths</h3>
+          <ul>
+            <li>Clean structure & clarity</li>
+            <li>Fast iteration</li>
+            <li>Strong visual polish</li>
+          </ul>
+        </div>
+
+        <div class="infoCard">
+          <h3>Tools</h3>
+          <ul>
+            <li>Figma</li>
+            <li>Framer</li>
+            <li>Adobe / Notion (optional)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUE -->
+    <section id="value" class="section">
+      <div class="sectionHeader">
+        <h2>Value</h2>
+        <p>
+          When working with me, teams gain a structured and reliable design partner
+          who combines analytical thinking with creativity and attention to detail.
+        </p>
+      </div>
+
+      <div class="valueGrid">
+        <div class="valueCard">
+          <div class="valueNumber">01</div>
+          <h3>User-Centered Clarity</h3>
+          <p>
+            I translate complex requirements into structured user journeys,
+            clear interaction concepts and intuitive interfaces.
+          </p>
+        </div>
+
+        <div class="valueCard">
+          <div class="valueNumber">02</div>
+          <h3>Collaboration</h3>
+          <p>
+            I work closely with developers, product owners and stakeholders
+            to align design decisions with technical and business goals.
+          </p>
+        </div>
+
+        <div class="valueCard">
+          <div class="valueNumber">03</div>
+          <h3>Design Excellence</h3>
+          <p>
+            From wireframes to high-fidelity prototypes and design systems,
+            I ensure consistency, usability and strong visual quality.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKS -->
+    <section id="works" class="section">
+      <div class="sectionHeader">
+        <h2>My works</h2>
+        <p>6 selected projects. Click a project to open the full case study page.</p>
+      </div>
+
+      <div class="worksGrid">
+        <a class="workCard" href="./works/work-1.html">
+          <div class="workImg" style="background-image:url('./assets/works/work-1/cover.png')"></div>
+          <div class="workMeta">
+            <h3>Style Guide</h3>
+          </div>
+        </a>
+
+        <a class="workCard" href="./works/work-2.html">
+          <div class="workImg" style="background-image:url('./assets/works/work-2/cover.png')"></div>
+          <div class="workMeta">
+            <h3>Mobile App</h3>
+          </div>
+        </a>
+
+        <a class="workCard" href="./works/work-3.html">
+          <div class="workImg" style="background-image:url('./assets/works/work-3/cover.png')"></div>
+          <div class="workMeta">
+            <h3>Dashboard</h3>
+          </div>
+        </a>
+
+        <a class="workCard" href="./works/work-4.html">
+          <div class="workImg" style="background-image:url('./assets/works/work-4/cover.png')"></div>
+          <div class="workMeta">
+            <h3>Settings</h3>
+          </div>
+        </a>
+
+        <a class="workCard" href="./works/work-5.html">
+          <div class="workImg" style="background-image:url('./assets/works/work-5/cover.png')"></div>
+          <div class="workMeta">
+            <h3>Landing Page</h3>
+          </div>
+        </a>
+
+        <a class="workCard" href="./works/work-6.html">
+          <div class="workImg" style="background-image:url('./assets/works/work-6/cover.png')"></div>
+          <div class="workMeta">
+            <h3>Dress Me Project</h3>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="sectionHeader">
+        <h2>Contact</h2>
+        <p>
+          Feel free to reach out for collaborations, freelance projects
+          or full-time opportunities.
+        </p>
+      </div>
+
+      <div class="contactCard">
+        <div class="contactRow">
+          <span class="label">Email</span>
+          <a class="value" href="mailto:fatemeh.farajollahi@outlook.de">
+            fatemeh.farajollahi@outlook.de
+          </a>
+        </div>
+
+        <div class="contactRow">
+          <span class="label">Phone</span>
+          <a class="value" href="tel:+4915560410347">
+            015560410347
+          </a>
+        </div>
+
+        <div class="contactRow">
+          <span class="label">LinkedIn</span>
+          <a class="value"
+             href="https://www.linkedin.com/in/fatemeh-ava-farajollahi/"
+             target="_blank"
+             rel="noopener">
+            linkedin.com/in/fatemeh-ava-farajollahi
+          </a>
+        </div>
+
+        <div class="contactActions">
+          <a class="btn" href="mailto:fatemeh.farajollahi@outlook.de">Send email</a>
+          <a class="btn ghost" href="#top">Back to top</a>
+        </div>
+      </div>
+
+      <footer class="footer">© <span id="year"></span> Fatemeh Farajollahi</footer>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
 </body>
 </html>

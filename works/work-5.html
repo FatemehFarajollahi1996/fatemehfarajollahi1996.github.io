@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Landing Pages</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <header class="navWrap">
+    <nav class="nav">
+      <a class="brand" href="../index.html#top">Fatemeh</a>
+
+      <div class="navLinks">
+        <a class="navLink" href="../index.html#about">About me</a>
+        <a class="navLink" href="../index.html#value">Value</a>
+        <a class="navLink" href="../index.html#works">My works</a>
+        <a class="navLink" href="../index.html#contact">Contact</a>
+      </div>
+
+      <a class="navCta" href="../index.html#contact">Let’s talk</a>
+    </nav>
+  </header>
+
+  <main class="workPage">
+    <div class="workContainer">
+      <div class="backRow">
+        <a class="btn ghost" href="../index.html#works">← Back to works</a>
+      </div>
+
+      <section class="workHero">
+        <div class="workBody">
+          <h1>Landing Pages</h1>
+
+          <p class="workIntro">
+            A set of landing page concepts focused on strong hierarchy, clear sections,
+            and a clean visual rhythm across different themes.
+          </p>
+
+          <!-- Tabs -->
+          <div class="tabs" role="tablist" aria-label="Work 5 tabs">
+            <button class="tab is-active" type="button" aria-selected="true" data-target="tab-academy">Academy</button>
+            <button class="tab" type="button" aria-selected="false" data-target="tab-bakery">Bakery</button>
+            <button class="tab" type="button" aria-selected="false" data-target="tab-business">Business</button>
+            <button class="tab" type="button" aria-selected="false" data-target="tab-orange">Orange</button>
+            <button class="tab" type="button" aria-selected="false" data-target="tab-strawberry">Strawberry</button>
+            <button class="tab" type="button" aria-selected="false" data-target="tab-apple">Apple</button>
+          </div>
+
+          <!-- Divider (trenner zwischen items und screenshots) -->
+          <div class="sectionDivider"></div>
+
+          <!-- Panels -->
+          <div class="tabPanels">
+            <section id="tab-academy" class="tabPanel is-active" role="tabpanel">
+              <img class="workImgFull workImgSmall"
+                   src="../assets/works/work-5/landing_academy_1.png"
+                   alt="Landing page: Academy"
+                   loading="lazy">
+            </section>
+
+            <section id="tab-bakery" class="tabPanel" role="tabpanel">
+              <img class="workImgFull workImgSmall"
+                   src="../assets/works/work-5/landing_bakery_1.png"
+                   alt="Landing page: Bakery"
+                   loading="lazy">
+            </section>
+
+            <section id="tab-business" class="tabPanel" role="tabpanel">
+              <img class="workImgFull workImgSmall"
+                   src="../assets/works/work-5/landing_business_1.png"
+                   alt="Landing page: Business"
+                   loading="lazy">
+            </section>
+
+            <section id="tab-orange" class="tabPanel" role="tabpanel">
+              <img class="workImgFull workImgSmall"
+                   src="../assets/works/work-5/landing_orange_1.png"
+                   alt="Landing page: Orange theme"
+                   loading="lazy">
+            </section>
+
+            <section id="tab-strawberry" class="tabPanel" role="tabpanel">
+              <img class="workImgFull workImgSmall"
+                   src="../assets/works/work-5/landing_strawberry_1.png"
+                   alt="Landing page: Strawberry theme"
+                   loading="lazy">
+            </section>
+
+            <section id="tab-apple" class="tabPanel" role="tabpanel">
+              <img class="workImgFull workImgSmall"
+                   src="../assets/works/work-5/landing_apple_1.png"
+                   alt="Landing page: Apple theme"
+                   loading="lazy">
+            </section>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const tabs = Array.from(document.querySelectorAll(".tab"));
+    const panels = Array.from(document.querySelectorAll(".tabPanel"));
+
+    function activate(targetId){
+      tabs.forEach(t => {
+        const on = t.dataset.target === targetId;
+        t.classList.toggle("is-active", on);
+        t.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      panels.forEach(p => p.classList.toggle("is-active", p.id === targetId));
+    }
+
+    tabs.forEach(btn => btn.addEventListener("click", () => activate(btn.dataset.target)));
+  </script>
+</body>
+</html>

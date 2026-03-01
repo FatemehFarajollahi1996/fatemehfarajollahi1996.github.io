@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Settings</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <header class="navWrap">
+    <nav class="nav">
+      <a class="brand" href="../index.html#top">Fatemeh</a>
+
+      <div class="navLinks">
+        <a class="navLink" href="../index.html#about">About me</a>
+        <a class="navLink" href="../index.html#value">Value</a>
+        <a class="navLink" href="../index.html#works">My works</a>
+        <a class="navLink" href="../index.html#contact">Contact</a>
+      </div>
+
+      <a class="navCta" href="../index.html#contact">Let’s talk</a>
+    </nav>
+  </header>
+
+  <main class="workPage">
+    <div class="workContainer">
+      <div class="backRow">
+        <a class="btn ghost" href="../index.html#works">← Back to works</a>
+      </div>
+
+      <section class="workHero">
+        <div class="workBody">
+          <h1>Settings</h1>
+
+          <p class="workIntro">
+            A settings experience designed for clarity and trust — including profile management,
+            a payment details flow, and supporting user stories.
+          </p>
+
+          <!-- Tabs -->
+          <div class="tabs" role="tablist" aria-label="Work 4 tabs">
+            <button class="tab is-active" type="button" aria-selected="true" data-target="tab-settings">Settings</button>
+            <button class="tab" type="button" aria-selected="false" data-target="tab-payment">Payment</button>
+          </div>
+
+          <!-- Divider -->
+          <div class="sectionDivider"></div>
+
+          <!-- Panels -->
+          <div class="tabPanels">
+
+            <section id="tab-settings" class="tabPanel is-active" role="tabpanel">
+              <img class="workImgFull workImgSm" src="../assets/works/work-4/settings_1.png" alt="Settings UI" loading="lazy">
+            </section>
+
+            <section id="tab-payment" class="tabPanel" role="tabpanel">
+              <img class="workImgFull workImgSm" src="../assets/works/work-4/payment_1.png" alt="Payment details" loading="lazy">
+            </section>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const tabs = Array.from(document.querySelectorAll(".tab"));
+    const panels = Array.from(document.querySelectorAll(".tabPanel"));
+
+    function activate(targetId){
+      tabs.forEach(t => {
+        const on = t.dataset.target === targetId;
+        t.classList.toggle("is-active", on);
+        t.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      panels.forEach(p => p.classList.toggle("is-active", p.id === targetId));
+    }
+
+    tabs.forEach(btn => btn.addEventListener("click", () => activate(btn.dataset.target)));
+  </script>
+</body>
+</html>

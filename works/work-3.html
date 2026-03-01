@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <header class="navWrap">
+    <nav class="nav">
+      <a class="brand" href="../index.html#top">Fatemeh</a>
+
+      <div class="navLinks">
+        <a class="navLink" href="../index.html#about">About me</a>
+        <a class="navLink" href="../index.html#value">Value</a>
+        <a class="navLink" href="../index.html#works">My works</a>
+        <a class="navLink" href="../index.html#contact">Contact</a>
+      </div>
+
+      <a class="navCta" href="../index.html#contact">Let’s talk</a>
+    </nav>
+  </header>
+
+  <main class="workPage">
+    <div class="workContainer">
+      <div class="backRow">
+        <a class="btn ghost" href="../index.html#works">← Back to works</a>
+      </div>
+
+      <section class="workHero">
+        <div class="workBody">
+          <h1>Dashboard</h1>
+
+          <p class="workIntro">
+            A clean dashboard concept focused on clarity, quick actions, and readable data hierarchy.
+            The case study includes user story, wireframes, and final UI screens.
+          </p>
+
+          <!-- Tabs -->
+          <div class="tabs" role="tablist" aria-label="Work 3 tabs">
+            <button class="tab" type="button" aria-selected="false" data-target="tab-dashboard">Dashboard</button>
+            <button class="tab" type="button" aria-selected="false" data-target="tab-frame">Frame</button>
+            <button class="tab" type="button" aria-selected="false" data-target="tab-wireframe">Wireframe</button>
+            <button class="tab" type="button" aria-selected="false" data-target="tab-extra">Extra</button>
+          </div>
+
+          <!-- Divider -->
+          <div class="sectionDivider"></div>
+
+          <!-- Panels -->
+          <div class="tabPanels">
+
+            <section id="tab-dashboard" class="tabPanel is-active" role="tabpanel">
+              <img class="workImgFull" src="../assets/works/work-3/dashboard_1.png" alt="Dashboard" loading="lazy">
+            </section>
+
+            <section id="tab-frame" class="tabPanel" role="tabpanel">
+              <img class="workImgFull" src="../assets/works/work-3/frame_1052_1.png" alt="Frame" loading="lazy">
+            </section>
+
+            <section id="tab-wireframe" class="tabPanel" role="tabpanel">
+              <img class="workImgFull" src="../assets/works/work-3/wireframe_1.png" alt="Wireframe" loading="lazy">
+            </section>
+
+            <section id="tab-extra" class="tabPanel" role="tabpanel">
+              <img class="workImgFull" src="../assets/works/work-3/calendar_1.jpg" alt="Extra" loading="lazy">
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const tabs = Array.from(document.querySelectorAll(".tab"));
+    const panels = Array.from(document.querySelectorAll(".tabPanel"));
+
+    function activate(targetId){
+      tabs.forEach(t => {
+        const on = t.dataset.target === targetId;
+        t.classList.toggle("is-active", on);
+        t.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      panels.forEach(p => p.classList.toggle("is-active", p.id === targetId));
+    }
+
+    tabs.forEach(btn => btn.addEventListener("click", () => activate(btn.dataset.target)));
+  </script>
+</body>
+</html>
